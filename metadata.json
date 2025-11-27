@@ -1,0 +1,5 @@
+{
+  "name": "BugWise PoC",
+  "description": "End the Groundhog Day of Debugging. A metadata-first platform that connects Jira, GitHub, Sentry, and Datadog to identify and resolve recurring bugs using AI.",
+  "requestFramePermissions": []
+}
