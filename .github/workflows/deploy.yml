@@ -26,6 +26,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
+      
+      - name: Verify lock file exists
+        run: |
+          if [ ! -f "package-lock.json" ]; then
+            echo "Error: package-lock.json not found"
+            ls -la
+            exit 1
+          fi
+          echo "Lock file found:"
+          ls -lh package-lock.json
       
       - name: Install dependencies
         run: npm install
