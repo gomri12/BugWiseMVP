@@ -6,7 +6,7 @@ export const generateRootCauseAnalysis = async (
   bugTitle: string, 
   signals: any[]
 ): Promise<string> => {
-  const apiKey = process.env.API_KEY;
+  const apiKey = import.meta.env.VITE_API_KEY || import.meta.env.API_KEY;
   
   // Fallback if no key is present for the PoC
   if (!apiKey) {
